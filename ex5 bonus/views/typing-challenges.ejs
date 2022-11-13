@@ -1,0 +1,51 @@
+<%- include("includes/header", {bonus:``, body_init:``}) %>
+<%- include("includes/nav") %>
+<main>
+    <h1>Challenges</h1>
+    <table class="list">
+        <tr>
+            <th></th>
+            <th>Challenge</th>
+            <th>Author</th>>
+            <th>Level</th>
+            <th>Played</th>
+            <th>Action</th>
+         </tr>
+        <% for (let i = 0; i < challenges.length; i++ ) { %>
+            <tr class = "challenge">
+                <td>
+                  <form action="/games/typing/challenges/<%= i %>/test" method="GET">
+                     <input type="submit" value="Play">
+                  </form>
+               </td>
+               <td>
+                  <a href="/games/typing/challenges/<%= i %>/edit"><%- challenges[i].text %></a>
+               </td>
+                <td>
+                   <%- challenges[i].author %>
+                </td>
+                <td>
+                   <%- challenges[i].level %>
+                </td>
+                <td>
+                  <%- challenges[i].counter %>
+                </td>
+                <td>
+                   <form method="POST" action="/games/typing/challenges/<%= i %>?_method=DELETE">
+                      <input type="submit" value="Delete challenge">
+                   </form>
+                </td>
+             </tr>
+        <% } %>
+    </table>
+
+    <form action="/games/typing/challenges" method="POST">
+        <input  name="text" type="text" value="" placeholder="Challenge">
+        <input  name="author" type="text" value="" placeholder="Author">
+        <input  name="level" type="range" min="0" max="10" value="5">
+        <button type="submit" class="buttons cta">Save</button>
+     </form>
+</main>
+
+<%- include("includes/high_scores", high_scores) %>
+<%- include("includes/footer") %>

@@ -1,0 +1,63 @@
+<!--
+
+   Web Atelier 2022  Exercise 5 - Web Apps and APIs with Express
+
+   Student: CRISTIANO MASUTTI
+
+   Home Page
+
+-->
+
+<%- include("includes/header", {bonus:`"/stylesheets/play-typing-game.css"`, body_init:``}) %>
+<%- include("includes/nav") %>
+
+    <main>
+        <header>
+            <p class="player">
+                <span contenteditable="true"> <!--Bonus 6-->
+                    Cristiano
+                </span>
+            </p>
+            <p class="score">
+                Score: <span></span>
+            </p>
+            <p class="health">
+                <span></span>
+            </p>
+        </header>
+        <section class="game">
+            <p class="challenge">
+                <span class="undef"></span>
+                <span class="ok"></span>
+                <span class="error"></span>
+            </p>
+            <input type="text" id="txt">
+        </section>
+        <footer>
+            <p class="id">
+                Challenge Id: <span></span>
+            </p>
+            <p class="time">
+                Time left: <span></span>
+            </p>
+        </footer>
+        
+            <section class="actions">
+                <button data-action="start">
+                    Start
+                </button>
+                <button data-action="save">
+                    Save
+                </button>
+                <button data-action="quit">
+                    Quit
+                </button>
+            </section>
+        </main>
+        <script src="/js/script.js"></script>
+        <script src="/js/play-typing-game copy.js"></script>
+        <script src="/games/typing/challenges.js"></script>
+    
+    
+   <%- include("includes/high_score_bonus", {high_scores, Type:"typing"}) %>
+   <%- include("includes/footer") %>

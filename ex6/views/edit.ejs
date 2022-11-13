@@ -1,0 +1,51 @@
+<!--
+
+   Web Atelier 2022  Exercise 5 - Web Apps and APIs with Express
+
+   Student:CRISTIANO MASUTTI
+
+   Home Page
+
+-->
+
+<%- include("includes/header", {title: "index", bonus: "", body_init: ""}) %>
+<%- include("includes/nav") %>
+
+<main id="editPage">
+    <h1>EDIT</h1>
+    <form>
+    <table id="editTable">
+        <tr>
+            <td><h2><label for="gameTitle">Game Title</label></h2></td>
+            <td><input type="text" id="gameTitle" placeholder="Enter game title" required></td>
+        </tr>
+        <tr>
+            <td><h2><label for="edit_Email">Your Email</label></h2></td>
+            <td><input type="email" id="edit_Email" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></td>
+        </tr>
+        <tr>
+            <td><h2><label for="multiLineDescription">Game Description</label></h2></td>
+            <td><textarea rows="5" cols="50" id="multiLineDescription" placeholder="Enter game description" required></textarea></td>
+        </tr>
+        <tr>
+            <td><h2><label for="Game_icon">Game Image</label> </h2></td>
+            <td><input type="file" id="Game_icon" required></td>
+        </tr>
+        <tr>
+            <td><h2><label for="favourite">Mark as favourite</label></h2></td>
+            <td><input type="checkbox" id="favourite"></td>
+        </tr>
+        <tr>
+            <td><h2><label for="difficulty_Range">Select game difficulty</label></h2></td>
+            <td><input type="range" min="1" max="100" value="50" class="slider" id="difficulty_Range" required></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="submit">Submit</button></td>
+        </tr>
+    </table>  
+    </form>             
+</main>
+
+<%- include("includes/high_scores", high_scores) %>
+<%- include("includes/footer", {scripts:[]}) %>

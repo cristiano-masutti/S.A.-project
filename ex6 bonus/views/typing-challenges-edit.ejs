@@ -1,0 +1,25 @@
+<!--
+
+   Web Atelier 2022  Exercise 5 - Web Apps and APIs with Express
+
+   Student: CRISTIANO MASUTTI
+
+   Edit Challenge Form
+
+-->
+<%- include("includes/header", {bonus:``, body_init:``}) %>
+<%- include("includes/nav") %>
+
+<form method="POST" action="/games/typing/challenges/<%= challenges._id %>?_method=PUT">
+   <input type="submit" value="UPDATE">
+   <input type="text" name="text" placeholder="challenge" value="<%= challenges.text || "" %>"/>
+   <input type="text" name="author" placeholder="author" value="<%= challenges.author || "" %>"/>
+   <input type="range" name="level" min="0" max="10" value="<%= challenges.level || "" %>"/>
+</form>
+
+<form method="POST" action="/games/typing/challenges/<%= challenges._id %>?_method=DELETE">
+   <input type="submit" value="delete the user">
+</form>
+
+<%- include("includes/high_scores", high_scores) %>
+<%- include("includes/footer") %>

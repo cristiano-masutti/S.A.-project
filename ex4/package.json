@@ -1,0 +1,22 @@
+{
+    "name": "ex4-node",
+    "version": "1.0.0",
+    "description": "Web Atelier Exercise 4 Skeleton",
+    "main": "index.js",
+    "author": "__STUDENT NAME__",
+    "license": "MIT",
+    "scripts": {
+        "start": "node index.js",
+        "test": "mocha"
+    },
+    "devDependencies": {
+        "cheerio": "^1.0.0-rc.10",
+        "fast-check": "^3.2.0",
+        "mocha": "^9.1.2",
+        "should": "^13.2.3",
+        "supertest": "^6.1.6"
+    },
+    "dependencies": {
+        "fs-extra": "^10.1.0"
+    }
+}

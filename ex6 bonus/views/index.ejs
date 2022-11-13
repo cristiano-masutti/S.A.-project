@@ -1,0 +1,82 @@
+<!--
+
+   Web Atelier 2022  Exercise 5 - Web Apps and APIs with Express
+
+   Student:CRISTIANO MASUTTI
+
+   Home Page
+
+-->
+
+<%- include("includes/header", {title: "index", bonus: "", body_init: ""}) %>
+<%- include("includes/nav") %>
+
+<main id="mainGamePage">
+   <div id="mainphoto">
+       <img id="mainGameImage"   src="/images/tron.jpg" alt="Tron:Evolution videogame logo">
+       <div id="mainGameName">
+           <h1>Tron: Evolution</h1>
+       </div>
+   </div>
+   <article id="gameGameDescription">
+       <h2 class="descriptionTitle">The game</h2>
+       <p class="description">
+           Tron: Evolution is a third-person action game with racing and role-playing game elements incorporated. The game features both singleplayer and multiplayer modes. The basic gameplay focuses on acrobatics and combat. Player's movements are heavily parkour-influenced, while combat was inspired by capoeira. The game also features light cycle races. Each cycle leaves a light trail that can destroy or "derez" any enemy. Evolution features a persistent character progression system that lets players earn new levels and unlock new upgrades, both in multiplayer and singleplayer.
+       </p>
+       <h2 class="descriptionTitle">Multiplayer</h2>
+       <p class="description">
+           There are four different game modes in the game and four maps available initially. Two modes focus on combat with light discs and two other modes feature vehicular combat on light cycles, as well as a special light tank vehicle. Up to 10 people can play in online matches. Disintegration and team disintegration are classic deathmatch modes. Power Monger is a node control mode and Bit Runner is a capture-the-flag variation. There is also a levelling system, which upgrades player's character version (level) and gains memory for upgrades. The character can gain versions up to 50. After version 50, the players cannot upgrade their own character anymore.
+           Two more multiplayer maps, as well as a Sam Flynn character skin, were made available at the game's launch as downloadable content through codes included in the game package. Five more maps and the Black Guard character skin were released in a downloadable pack; one of these, the "Classic" map, is a replica of the light cycle grid from the original Tron film.
+       </p>
+   </article>
+   <div id="wannaPlay">
+       <h1>Let's play</h1>
+       <form method="POST" action="/games/random">
+            <input type="text" name="player" placeholder="Insert your name">
+            <button>Create new game</button>
+            <input type="submit">
+       </form>
+       <a id="goToBrowse" href="browse.html">Go to the other games</a>
+   </div>
+   <section id="gameGameDescription">
+       <h2 class="descriptionTitle instruction"> Instructions to play</h2>
+       <p class="description">
+           To start the game, insert first your name and then press start game.
+           Then you can find the commands here below:
+       </p>
+   </section>
+   <table id="instructions">
+       <tr>
+           <th>Command</th>
+           <th>Instruction</th>
+       </tr>
+       <tr>
+           <td>W</td>
+           <td>Move Forward</td>
+       </tr>
+       <tr>
+           <td>A</td>
+           <td>Move Left</td>
+       </tr>
+       <tr>
+           <td>S</td>
+           <td>Move Backwards</td>
+       </tr>
+       <tr>
+           <td>D</td>
+           <td>Move Right</td>
+       </tr>
+       <tr>
+           <td>F</td>
+           <td>Fight</td>                     
+       </tr>
+       <tr>
+           <td>Space bar</td>
+           <td>Jump</td>
+       </tr>
+   </table>
+   
+</main>
+
+<%- include("includes/high_scores", high_scores) %>
+<%- include("includes/footer", {scripts:[]}) %>

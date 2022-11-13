@@ -1,0 +1,41 @@
+<!--
+
+   Web Atelier 2022  Exercise 5 - Web Apps and APIs with Express
+
+   Student: CRISTIANO MASUTTI
+
+   Game Over Page
+
+-->
+<%- include("includes/header", {bonus:`"/stylesheets/play-typing-game.css"`, body_init:``}) %>
+<%- include("includes/nav") %>
+<main>
+   <h1>GAME OVER</h1>
+<div>
+   <h2 class="player"> Player: <span><%=player%></span></h1>
+</div>
+<div>
+   <h2 class="score"> Score: <span><%=score%></span></h1>
+</div>
+
+<div>
+   <h2 class="time"> Time: <span><%=time%></span></h1>
+</div>
+
+<div>
+   <h2 class="game"> Game: <span><%=game%></span></h1>
+</div>
+
+
+<form method="POST" action="/high_scores">
+   <input type="hidden" name="player" value="<%-player%>">
+   <input type="hidden" name="score" value="<%-score%>">
+   <input type="hidden" name="time" value="<%-time%>">
+   <input type="hidden" name="game" value="<%-game%>">
+   <button type="submit">Save</button>
+</form>
+
+</main>
+ 
+<%- include("includes/high_scores", high_scores) %>
+<%- include("includes/footer", {scripts:[]}) %>

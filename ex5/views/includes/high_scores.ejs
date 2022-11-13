@@ -1,0 +1,19 @@
+<!--
+
+   Web Atelier 2022  Exercise 5 - Web Apps and APIs with Express
+
+   Student: __STUDENT NAME__
+
+   High Scores View Fragment
+
+-->
+
+<aside>
+   <h1 id="rankTitle">TOP Scores</h1>
+   <% for (let i = 0; i < high_scores.length; i++) { %>
+      <p><%= i+1 %></p>
+      <p class="player">Player <span><%= high_scores[i].player%></span></p>
+      <p class="score">Score <span><%= high_scores[i].score%></span></p>
+   <% } %>
+</aside>
+</div>

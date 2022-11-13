@@ -1,0 +1,53 @@
+<!--
+
+   Web Atelier 2022  Exercise 5 - Web Apps and APIs with Express
+
+   Student:CRISTIANO MASUTTI
+
+   Home Page
+
+-->
+
+<%- include("includes/header", {title: "index", bonus: "", body_init: ""}) %>
+<%- include("includes/nav") %>
+
+<main>
+    <header>
+        <p class="player">
+            Cristiano
+        </p>
+        <p class="score">
+            Score:1000
+        </p>
+        <p class="health">
+            100%
+        </p>
+    </header>
+    <footer>
+        <p class="level">
+            Level: 1
+        </p>
+        <p class="time">
+            Time left: 1:59
+        </p>
+    </footer>
+    <section class="game">
+        <canvas>
+            
+        </canvas>
+    </section>
+        <section class="actions">
+            <button data-action="start">
+                Start
+            </button>
+            <button data-action="save">
+                Save
+            </button>
+            <button data-action="quit">
+                Quit
+            </button>
+        </section>
+    </main>
+
+<%- include("includes/high_scores", high_scores) %>
+<%- include("includes/footer", {scripts:[]}) %>

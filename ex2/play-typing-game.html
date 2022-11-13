@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/play-typing-game.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <header>
+            <p class="player">
+                Cristiano
+                <span></span>
+            </p>
+            <p class="score">
+                Score: <span></span>
+            </p>
+            <p class="health">
+                <span></span>
+            </p>
+        </header>
+        <section class="game">
+            <p class="challenge">
+                <span class="undef"></span>
+                <span class="ok"></span>
+                <span class="error"></span>
+            </p>
+            <input type="text" id="txt">
+        </section>
+        <footer>
+            <p class="level">
+                Level: <span></span>
+            </p>
+            <p class="time">
+                Time left: <span></span>
+            </p>
+        </footer>
+        
+            <section class="actions">
+                <button data-action="start">
+                    Start
+                </button>
+                <button data-action="save">
+                    Save
+                </button>
+                <button data-action="quit">
+                    Quit
+                </button>
+            </section>
+        </main>
+</body>
+<script src="./js/script.js"></script>
+<script src="./js/play-typing-game.js"></script>
+</html>

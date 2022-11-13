@@ -1,0 +1,199 @@
+<!--
+    Web Atelier 2022
+    Exercise 1
+    HTML5 and CSS
+
+    Home Page
+
+    Author: Cristiano Masutti
+
+-->
+<html>
+    <head>
+        <title></title>
+        <meta name="author" content="Cristiano Masutti">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link rel="icon" type="image" href="/icons/favicon.png">
+    </head>
+    <body>
+        <header>
+            <span>
+                <h1 id="mainGameTitle">Games World</h1>
+                <!--<img src="icons/home.svg" alt="Pac-Man logo"> -->
+            </span>
+        </header>
+        <div class="main">
+            <nav>
+                <a href="index.html" class="activePage">Home</a>
+                <a href="browse.html">Browse</a> 
+                <a href="play.html">Play</a>  
+                <a href="edit.html" >Edit</a> 
+            </nav>
+            <main id="mainGamePage">
+                <div id="mainphoto">
+                    <img id="mainGameImage"   src="images/tron.jpg" alt="Tron:Evolution videogame logo">
+                    <div id="mainGameName">
+                        <h1>Tron: Evolution</h1>
+                    </div>
+                </div>
+                <article id="gameGameDescription">
+                    <h2 class="descriptionTitle">The game</h2>
+                    <p class="description">
+                        Tron: Evolution is a third-person action game with racing and role-playing game elements incorporated. The game features both singleplayer and multiplayer modes. The basic gameplay focuses on acrobatics and combat. Player's movements are heavily parkour-influenced, while combat was inspired by capoeira. The game also features light cycle races. Each cycle leaves a light trail that can destroy or "derez" any enemy. Evolution features a persistent character progression system that lets players earn new levels and unlock new upgrades, both in multiplayer and singleplayer.
+                    </p>
+                    <h2 class="descriptionTitle">Multiplayer</h2>
+                    <p class="description">
+                        There are four different game modes in the game and four maps available initially. Two modes focus on combat with light discs and two other modes feature vehicular combat on light cycles, as well as a special light tank vehicle. Up to 10 people can play in online matches. Disintegration and team disintegration are classic deathmatch modes. Power Monger is a node control mode and Bit Runner is a capture-the-flag variation. There is also a levelling system, which upgrades player's character version (level) and gains memory for upgrades. The character can gain versions up to 50. After version 50, the players cannot upgrade their own character anymore.
+                        Two more multiplayer maps, as well as a Sam Flynn character skin, were made available at the game's launch as downloadable content through codes included in the game package. Five more maps and the Black Guard character skin were released in a downloadable pack; one of these, the "Classic" map, is a replica of the light cycle grid from the original Tron film.
+                    </p>
+                </article>
+                <div id="wannaPlay">
+                    <h1>Let's play</h1>
+                    <form>
+                        <input type="text" name="PlayerName" placeholder="Insert your name">
+                        <button>Start game</button>
+                        <button>Create new game</button>
+                    </form>
+                    <a id="goToBrowse" href="browse.html">Go to the other games</a>
+                </div>
+                <section id="gameGameDescription">
+                    <h2 class="descriptionTitle instruction"> Instructions to play</h2>
+                    <p class="description">
+                        To start the game, insert first your name and then press start game.
+                        Then you can find the commands here below:
+                    </p>
+                </section>
+                <table id="instructions">
+                    <tr>
+                        <th>Command</th>
+                        <th>Instruction</th>
+                    </tr>
+                    <tr>
+                        <td>W</td>
+                        <td>Move Forward</td>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td>Move Left</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>Move Backwards</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td>Move Right</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>Fight</td>                     
+                    </tr>
+                    <tr>
+                        <td>Space bar</td>
+                        <td>Jump</td>
+                    </tr>
+                </table>
+                
+            </main>
+            <aside>
+                <h1 id="rankTitle">TOP Scores</h1>
+                <ul>
+                    <li class="rank">
+                        <div class="position">
+                            <h1>1</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>109</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>2</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>108</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>3</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>107</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>4</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>106</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>4</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>105</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>6</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>104</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>7</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>103</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>8</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>102</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>9</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>101</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>10</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>100</h2>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <footer class="endPage">
+            <div>
+                <h1>
+                    Find us on:
+                </h1>
+                <img src="./icons/insta.png" alt="Instagram Logo">
+                <img src="./icons/twitter.png" alt="Twitter Logo">
+                <img src="./icons/stack.png" alt="StackOverflow Logo">
+                <img src="./icons/git.png" alt="GitHubLogo">
+            </div>
+        </footer>
+    </body>
+</html>

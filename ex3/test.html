@@ -1,0 +1,48 @@
+<!--
+    Web Atelier 2022
+    Exercise 3
+    Object-Oriented JavaScript
+
+    Automatic Tests
+
+    Author: CRISTIANO MASUTTI
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Web Atelier 2022 - 3 - Object-Oriented JavaScript - Mocha Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/mocha.css" />
+  </head>
+  <body>
+    <h1>Web Atelier 2022 - 3 - Object-Oriented JavaScript - Automated Tests</h1>
+    <article id="mocha"></article>
+
+    <!-- Scripts with the solution to be tested -->
+
+    <div class="game"></div>
+    <iframe src="play-snake-game.html" style="width:100%; height: 512px;"></iframe>
+    <script src="js/play-snake-game.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="js/test/mocha.js"></script>
+    <script src="js/test/should.js"></script>
+    <script src="js/test/fast-check.js"></script>
+
+    <script class="mocha-init">
+      mocha.setup('bdd');
+      mocha.checkLeaks();
+    </script>
+
+    <!-- Script with the test cases -->
+    <script src="js/test.js"></script>
+    <script class="mocha-exec">
+      mocha.globals(['___browserSync___']);
+
+      fetch("./play-snake-game.html").then(response=>response.text()).then(html=>document.querySelector(".game").innerHTML = html).then(setTimeout(()=>mocha.run(),1000));
+    </script>
+  </body>
+</html>

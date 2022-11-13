@@ -1,0 +1,169 @@
+<!--
+    Web Atelier 2022
+    Exercise 1
+    HTML5 and CSS
+
+    Game Editor Form Page
+
+    Author: Cristiano Masutti
+
+-->
+
+<html>
+    <head>
+        <title>Edit the game</title>
+        <meta name="author" content="Cristiano Masutti">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link rel="icon" type="image" href="/icons/favicon.png">
+    </head>
+    <body>
+        <header>
+            <span>
+                <h1 id="mainGameTitle">Games World</h1>
+                <!--<img src="icons/home.svg" alt="Pac-Man logo"> -->
+            </span>
+        </header>
+        <div class="main">
+            <nav id="edit_nav">
+                <a href="index.html">Home</a>
+                <a href="browse.html">Browse</a> 
+                <a href="play.html">Play</a>  
+                <a href="edit.html" class="activePage">Edit</a> 
+            </nav>
+            <main id="editPage">
+                <h1>EDIT</h1>
+                <form>
+                <table id="editTable">
+                    <tr>
+                        <td><h2><label for="gameTitle">Game Title</label></h2></td>
+                        <td><input type="text" id="gameTitle" placeholder="Enter game title" required></td>
+                    </tr>
+                    <tr>
+                        <td><h2><label for="edit_Email">Your Email</label></h2></td>
+                        <td><input type="email" id="edit_Email" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></td>
+                    </tr>
+                    <tr>
+                        <td><h2><label for="multiLineDescription">Game Description</label></h2></td>
+                        <td><textarea rows="5" cols="50" id="multiLineDescription" placeholder="Enter game description" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><h2><label for="Game_icon">Game Image</label> </h2></td>
+                        <td><input type="file" id="Game_icon" required></td>
+                    </tr>
+                    <tr>
+                        <td><h2><label for="favourite">Mark as favourite</label></h2></td>
+                        <td><input type="checkbox" id="favourite"></td>
+                    </tr>
+                    <tr>
+                        <td><h2><label for="difficulty_Range">Select game difficulty</label></h2></td>
+                        <td><input type="range" min="1" max="100" value="50" class="slider" id="difficulty_Range" required></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button id="submit">Submit</button></td>
+                    </tr>
+                </table>  
+                </form>             
+            </main>
+            <aside>
+                <h1 id="rankTitle">TOP Scores</h1>
+                <ul>
+                    <li class="rank">
+                        <div class="position">
+                            <h1>1</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>109</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>2</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>108</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>3</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>107</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>4</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>106</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>4</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>105</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>6</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>104</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>7</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>103</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>8</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>102</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>9</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>101</h2>
+                    </li>
+
+                    <li class="rank">
+                        <div class="position">
+                            <h1>10</h1>
+                        </div>
+                        <h2>ioooooooooo</h2>
+                        <h2>100</h2>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <footer class="endPage">
+            <div>
+                <h1>
+                    Find us on:
+                </h1>
+                <img src="./icons/insta.png" alt="Instagram Logo">
+                <img src="./icons/twitter.png" alt="Twitter Logo">
+                <img src="./icons/stack.png" alt="StackOverflow Logo">
+                <img src="./icons/git.png" alt="GitHubLogo">
+            </div>
+        </footer>
+    </body>
+</html>

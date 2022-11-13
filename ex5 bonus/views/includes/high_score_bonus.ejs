@@ -1,0 +1,11 @@
+<aside>
+    <h1 id="rankTitle">TOP Scores</h1>
+    <% for (let i = 0; i < Math.min(10, high_scores.length); i++) { %>
+        <% if (high_scores[i].game == Type)  {%>
+            <p class="player">Player <span><%= high_scores[i].player%></span></p>
+            <p class="score">Score <span><%= high_scores[i].score%></span></p>
+            <p class="time">Time <span><%= high_scores[i].time%></span></p>
+         <% } %>
+    <% } %>
+ </aside>
+ </div>

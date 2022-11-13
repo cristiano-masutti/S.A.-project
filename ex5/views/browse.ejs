@@ -1,0 +1,210 @@
+<!--
+
+   Web Atelier 2022  Exercise 5 - Web Apps and APIs with Express
+
+   Student:CRISTIANO MASUTTI
+
+   Home Page
+
+-->
+
+<%- include("includes/header", {title: "index", bonus: "", body_init: ""}) %>
+<%- include("includes/nav") %>
+
+<main class="game_table">
+    <header>
+        <span></span>
+        <a href="songs.html?sort=type">Type</a>
+        <a href="songs.html?sort=title">Title</a>
+        <a href="songs.html?sort=time_played">Last Played</a>
+        <a href="songs.html?sort=player_winner">Winner</a>
+        <a href="songs.html?sort=best_score">Best Score</a>
+        <a href="songs.html?sort=level">Level</a>
+        <a href="songs.html?sort=favourite">Fav</a>
+    </header>
+
+
+    <article class="game" data-gid="61460e91efd0d795bff2e3d5">
+        <a rel="play" href="play.html?61460e91efd0d795bff2e3d5" target="player">Play</a>
+        <span class="icon"><img src="icons/typing.png"></span>
+        <span class="title">Typing Gamee</span>
+        <span class="time_played">20/09/2022 18:00:00</span>
+        <span class="player_winner">Student Name</span>
+        <span class="best_score">999999</span>
+        <span class="level">001</span>
+        <button data-action="fav" id="fav_61460e91efd0d795bff2e3d5" data-fav="false">&star;</button>
+        <button data-action="start" id="start_61460e91efd0d795bff2e3d5">Start</button>
+        <button data-action="edit" id="edit_61460e91efd0d795bff2e3d5">Edit</button>
+        <button data-action="clone" id="clone_61460e91efd0d795bff2e3d5">Clone</button>
+        <button data-action="delete" id="delete_61460e91efd0d795bff2e3d5">&#215;</button>
+    </article>
+
+    <article class="game" data-gid="61460e91efd0d795bff2e3d6">
+        <a rel="play" href="play.html?61460e91efd0d795bff2e3d6" target="player">Play</a>
+        <span class="icon"><img src="icons/typing.png"></span>
+        <span class="title">Typing Game</span>
+        <span class="time_played">20/09/2022 20:00:00</span>
+        <span class="player_winner">Another Name</span>
+        <span class="best_score">9999999</span>
+        <span class="level">002</span>
+        <button data-action="fav" id="fav_61460e91efd0d795bff2e3d6" data-fav="true">&starf;</button>
+        <button data-action="start" id="start_61460e91efd0d795bff2e3d6">Start</button>
+        <button data-action="edit" id="edit_61460e91efd0d795bff2e3d6">Edit</button>
+        <button data-action="clone" id="clone_61460e91efd0d795bff2e3d6">Clone</button>
+        <button data-action="delete" id="delete_61460e91efd0d795bff2e3d6">&#215;</button>
+    </article>
+
+    <article class="game" data-gid="61460e91efd0d795bff2e3d7">
+        <a rel="play" href="play.html?61460e91efd0d795bff2e3d7" target="player">Play</a>
+        <span class="icon"><img src="icons/typing.png"></span>
+        <span class="title">Typing Game</span>
+        <span class="time_played">-</span>
+        <span class="player_winner">-</span>
+        <span class="best_score">-</span>
+        <span class="level">003</span>
+        <button data-action="fav" id="fav_61460e91efd0d795bff2e3d7" data-fav="true">&starf;</button>
+        <button data-action="start" id="start_61460e91efd0d795bff2e3d7">Start</button>
+        <button data-action="edit" id="edit_61460e91efd0d795bff2e3d7">Edit</button>
+        <button data-action="clone" id="clone_61460e91efd0d795bff2e3d7">Clone</button>
+        <button data-action="delete" id="delete_61460e91efd0d795bff2e3d7">&#215;</button>
+    </article>
+
+    <article class="game" data-gid="61460e91efd0d795bff2e3d8">
+        <a rel="play" href="play.html?61460e91efd0d795bff2e3d8" target="player">Play</a>
+        <span class="icon"><img src="icons/typing.png"></span>
+        <span class="title">Typing Game</span>
+        <span class="time_played">-</span>
+        <span class="player_winner">-</span>
+        <span class="best_score">-</span>
+        <span class="level">004</span>
+        <button data-action="fav" id="fav_61460e91efd0d795bff2e3d8" data-fav="false">&star;</button>
+        <button data-action="start" id="start_61460e91efd0d795bff2e3d8">Start</button>
+        <button data-action="edit" id="edit_61460e91efd0d795bff2e3d8">Edit</button>
+        <button data-action="clone" id="clone_61460e91efd0d795bff2e3d8">Clone</button>
+        <button data-action="delete" id="delete_61460e91efd0d795bff2e3d8">&#215;</button>
+    </article>
+
+    <article class="game" data-gid="61460e91efd0d795bff2e3d9">
+        <a rel="play" href="play.html?61460e91efd0d795bff2e3d9" target="player">Play</a>
+        <span class="icon"><img src="icons/typing.png"></span>
+        <span class="title">Typing Game</span>
+        <span class="time_played">-</span>
+        <span class="player_winner">-</span>
+        <span class="best_score">-</span>
+        <span class="level">005</span>
+        <button data-action="fav" id="fav_61460e91efd0d795bff2e3d9" data-fav="true">&starf;</button>
+        <button data-action="start" id="start_61460e91efd0d795bff2e3d9">Start</button>
+        <button data-action="edit" id="edit_61460e91efd0d795bff2e3d9">Edit</button>
+        <button data-action="clone" id="clone_61460e91efd0d795bff2e3d9">Clone</button>
+        <button data-action="delete" id="delete_61460e91efd0d795bff2e3d9">&#215;</button>
+    </article>
+
+    <article class="game" data-gid="5a15ed9a44c4947171f08fc23a7c">
+        <a rel="play" href="play.html?5a15ed9a44c4947171f08fc23a7c" target="player">Play</a>
+        <span class="icon"><img src="icons/pacman.png"></span>
+        <span class="title">Pacman</span>
+        <span class="time_played">19/09/2022 20:00:00</span>
+        <span class="player_winner">Student Name</span>
+        <span class="best_score">123456</span>
+        <span class="level">001</span>
+        <button data-action="fav" id="fav_5a15ed9a44c4947171f08fc23a7c" data-fav="true">&starf;</button>
+        <button data-action="start" id="start_5a15ed9a44c4947171f08fc23a7c">Start</button>
+        <button data-action="edit" id="edit_5a15ed9a44c4947171f08fc23a7c">Edit</button>
+        <button data-action="clone" id="clone_5a15ed9a44c4947171f08fc23a7c">Clone</button>
+        <button data-action="delete" id="delete_5a15ed9a44c4947171f08fc23a7c">&#215;</button>
+    </article>
+
+    <article class="game" data-gid="5a15ed9a44c4947171f08fc23a7d">
+        <a rel="play" href="play.html?5a15ed9a44c4947171f08fc23a7d" target="player">Play</a>
+        <span class="icon"><img src="icons/pacman.png"></span>
+        <span class="title">Pacman</span>
+        <span class="time_played">19/09/2022 21:00:00</span>
+        <span class="player_winner">Student Name</span>
+        <span class="best_score">234567</span>
+        <span class="level">002</span>
+        <button data-action="fav" id="fav_5a15ed9a44c4947171f08fc23a7d" data-fav="false">&star;</button>
+        <button data-action="start" id="start_5a15ed9a44c4947171f08fc23a7d">Start</button>
+        <button data-action="edit" id="edit_5a15ed9a44c4947171f08fc23a7d">Edit</button>
+        <button data-action="clone" id="clone_5a15ed9a44c4947171f08fc23a7d">Clone</button>
+        <button data-action="delete" id="delete_5a15ed9a44c4947171f08fc23a7d">&#215;</button>
+    </article>
+
+    <article class="game" data-gid="5a15ed9a44c4947171f08fc23a7e">
+        <a rel="play" href="play.html?5a15ed9a44c4947171f08fc23a7e" target="player">Play</a>
+        <span class="icon"><img src="icons/pacman.png"></span>
+        <span class="title">Pacman</span>
+        <span class="time_played">-</span>
+        <span class="player_winner">-</span>
+        <span class="best_score">-</span>
+        <span class="level">003</span>
+        <button data-action="fav" id="fav_5a15ed9a44c4947171f08fc23a7e" data-fav="true">&starf;</button>
+        <button data-action="start" id="start_5a15ed9a44c4947171f08fc23a7e">Start</button>
+        <button data-action="edit" id="edit_5a15ed9a44c4947171f08fc23a7e">Edit</button>
+        <button data-action="clone" id="clone_5a15ed9a44c4947171f08fc23a7e">Clone</button>
+        <button data-action="delete" id="delete_5a15ed9a44c4947171f08fc23a7e">&#215;</button>
+    </article>
+
+    <article class="game" data-gid="5a15ed9a44c4947171f08fc23a7f">
+        <a rel="play" href="play.html?5a15ed9a44c4947171f08fc23a7f" target="player">Play</a>
+        <span class="icon"><img src="icons/pacman.png"></span>
+        <span class="title">Pacman</span>
+        <span class="time_played">-</span>
+        <span class="player_winner">-</span>
+        <span class="best_score">-</span>
+        <span class="level">004</span>
+        <button data-action="fav" id="fav_5a15ed9a44c4947171f08fc23a7f" data-fav="true">&starf;</button>
+        <button data-action="start" id="start_5a15ed9a44c4947171f08fc23a7f">Start</button>
+        <button data-action="edit" id="edit_5a15ed9a44c4947171f08fc23a7f">Edit</button>
+        <button data-action="clone" id="clone_5a15ed9a44c4947171f08fc23a7f">Clone</button>
+        <button data-action="delete" id="delete_5a15ed9a44c4947171f08fc23a7f">&#215;</button>
+    </article>
+
+    <article class="game" data-gid="64b947fa58a7b18aca0f85c89b80">
+        <a rel="play" href="play.html?64b947fa58a7b18aca0f85c89b80" target="player">Play</a>
+        <span class="icon"><img src="icons/tic-tac-toe.png"></span>
+        <span class="title">Tic-Tac-Toe</span>
+        <span class="time_played">-</span>
+        <span class="player_winner">-</span>
+        <span class="best_score">-</span>
+        <span class="level">001</span>
+        <button data-action="fav" id="fav_64b947fa58a7b18aca0f85c89b80" data-fav="true">&starf;</button>
+        <button data-action="start" id="start_64b947fa58a7b18aca0f85c89b80">Start</button>
+        <button data-action="edit" id="edit_64b947fa58a7b18aca0f85c89b80">Edit</button>
+        <button data-action="clone" id="clone_64b947fa58a7b18aca0f85c89b80">Clone</button>
+        <button data-action="delete" id="delete_64b947fa58a7b18aca0f85c89b80">&#215;</button>
+    </article>
+
+    <article class="game" data-gid="928bc4db209d40e2e2f83360c2be">
+        <a rel="play" href="play.html?928bc4db209d40e2e2f83360c2be" target="player">Play</a>
+        <span class="icon"><img src="icons/space.png"></span>
+        <span class="title">Space Invaders</span>
+        <span class="time_played">-</span>
+        <span class="player_winner">-</span>
+        <span class="best_score">-</span>
+        <span class="level">001</span>
+        <button data-action="fav" id="fav_928bc4db209d40e2e2f83360c2be" data-fav="true">&starf;</button>
+        <button data-action="start" id="start_928bc4db209d40e2e2f83360c2be">Start</button>
+        <button data-action="edit" id="edit_928bc4db209d40e2e2f83360c2be">Edit</button>
+        <button data-action="clone" id="clone_928bc4db209d40e2e2f83360c2be">Clone</button>
+        <button data-action="delete" id="delete_928bc4db209d40e2e2f83360c2be">&#215;</button>
+    </article>
+
+    <article class="game" data-gid="928bc4db209d40e2e2f83360c2bf">
+        <a rel="play" href="play.html?928bc4db209d40e2e2f83360c2bf" target="player">Play</a>
+        <span class="icon"><img src="icons/space.png"></span>
+        <span class="title">Space Invaders</span>
+        <span class="time_played">-</span>
+        <span class="player_winner">-</span>
+        <span class="best_score">-</span>
+        <span class="level">002</span>
+        <button data-action="fav" id="fav_928bc4db209d40e2e2f83360c2bf" data-fav="false">&star;</button>
+        <button data-action="start" id="start_928bc4db209d40e2e2f83360c2bf">Start</button>
+        <button data-action="edit" id="edit_928bc4db209d40e2e2f83360c2bf">Edit</button>
+        <button data-action="clone" id="clone_928bc4db209d40e2e2f83360c2bf">Clone</button>
+        <button data-action="delete" id="delete_928bc4db209d40e2e2f83360c2bf">&#215;</button>
+    </article>
+
+</main>
+
+<%- include("includes/high_scores", high_scores) %>
+<%- include("includes/footer", {scripts:[]}) %>

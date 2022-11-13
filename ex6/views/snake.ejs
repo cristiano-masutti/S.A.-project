@@ -1,0 +1,38 @@
+<%- include("includes/header", {title: "snake" , bonus : `"/stylesheets/play-snake-game.css"`, body_init: `onload="init()"`}) %>
+<%- include("includes/nav") %>
+
+<main>
+    <header>
+        <p class="player">Player Name: <span>Student Name</span></p>
+        <p class="score">Score: <span>000000</span></p>
+        <p class="health">Health: <span>100%</span></p>
+    </header>
+    <form action="/games/snake" method="GET">
+        <input type="text" name="player" id="player">
+        <input type="submit" value="Submit">
+    </form>
+    <section class="game">
+        <canvas></canvas>
+    </section>
+    <section class="actions">
+        <button data-action="start">Start</button>
+        <button data-action="pause">Pause</button>
+        <button data-action="quit">Quit</button>
+    </section>
+    <footer>
+        <p class="level">Level: <span>000</span></p>
+        <p class="time">Elapsed Time: <span>00:00:00</span></p>
+    </footer>
+</main>
+<aside>
+    <ol>
+        
+    </ol>
+</aside>
+
+    <!-- TODO: Add <script> tags to load the JavaScript code -->
+<script src="/js/script_snake.js"></script>
+<script src="/js/play-snake-game copy.js"></script>
+
+<%- include("includes/high_scores") %>
+<%- include("includes/footer") %>
