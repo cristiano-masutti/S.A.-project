@@ -16,7 +16,7 @@ module.exports = router;
 let { model } = require("../model/");
 
 router.get('/', (req, res) => {
-    res.redirect("index.ejs");
+    res.redirect("index.html");
 })
 
 
@@ -25,7 +25,7 @@ router.get("/index.html", (req, res) => {
     /* Quiz 11 */
     model.high_scores.find({}).toArray().then(high_scores => {
 
-        res.render("index.ejs", { high_scores: high_scores });
+        res.render("index", { high_scores: high_scores });
 
     });
 
